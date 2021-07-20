@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="http://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
+    <link rel="shortcut icon" href="https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico">
+    <title>Facebook</title>
+</head>
+<body>
+    <div class="container">
+        <div class="post-modal-wrapper" id="post-modal-wrapper">
+            <div class="modal-header_left">
+                <a href="">
+                    <img src="./assets/페북 아이콘.png" alt="">
+                </a>
+                <div class="search">
+                    <img src="./assets/페북 검색 아이콘.png" alt="">
+                    <input type="text" placeholder="Facebook 검색" >
+                </div>
+            </div>
+            <div class="modal-header-right">
+                <div class="head-profile">
+                    <img src="./assets/프로필 사진.png" alt="">
+                    <p>사용자</p>
+                </div>
+                <div class="head-buttons">
+                    <div id="menu">
+                        <img src="./assets/메뉴 아이콘.png" alt="">
+                    </div>
+                    <div id="messenger">
+                        <img src="./assets/메신저 아이콘.png" alt="">
+                    </div>
+                    <div id="alarm">
+                        <img src="./assets/알림 아이콘.png" alt="">
+                    </div>
+                    <div id="account">
+                        <img src="./assets/계정 아이콘.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="post-modal">
+                <div class="post-modal-header">
+                    <p>게시물 만들기</p>
+                    <div id="xbutton" onclick="ModalOff()">
+                        <img src="./assets/x .png" alt="">
+                    </div>
+                </div>
+                <div class="post-modal-body">
+                    <div class="post-modal-body-head">
+                        <img src="./assets/왼프로필.png" alt="" class="post-modal-body-head-left">
+                        <div class="post-modal-body-head-right">
+                            <p>사용자</p>
+                            <div id="Full-disclosure">
+                                <img id="first-img" src="./assets/지구본.png" alt="">
+                                <p>전체 공개</p>
+                                <img id="second-img" src="./assets/전체공개 화살표.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-modal-body-body-top">
+                        <input id="title" type="text" placeholder="제목을 입력해주세요.">
+                    </div>
+                    <div class="post-modal-body-body">
+                        <textarea  name="" id="info" cols="30" rows="10" placeholder="사용자님, 무슨 생각을 하고 계신가요?"></textarea>
+                    </div>
+                    <div class="post-modal-body-footer">
+                        <img src="./assets/AA.png" alt="">
+                    </div>
+                </div>
+                <div class="post-modal-footer">
+                    <div class="post-modal-footer-head">
+                        <p>게시물에 추가</p>
+                        <div class="post-modal-footer-head-buttons">
+                            <div>
+                                <img src="./assets/게시사진.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시친구.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시기분.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시위치.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시질문.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시더보기.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button id="dopost" onclick="ConfigPost()">게시</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-modal-wrapper" id="edit-modal-wrapper">
+            <div class="modal-header_left">
+                <a href="">
+                    <img src="./assets/페북 아이콘.png" alt="">
+                </a>
+                <div class="search">
+                    <img src="./assets/페북 검색 아이콘.png" alt="">
+                    <input type="text" placeholder="Facebook 검색" >
+                </div>
+            </div>
+            <div class="modal-header-right">
+                <div class="head-profile">
+                    <img src="./assets/프로필 사진.png" alt="">
+                    <p>사용자</p>
+                </div>
+                <div class="head-buttons">
+                    <div id="menu">
+                        <img src="./assets/메뉴 아이콘.png" alt="">
+                    </div>
+                    <div id="messenger">
+                        <img src="./assets/메신저 아이콘.png" alt="">
+                    </div>
+                    <div id="alarm">
+                        <img src="./assets/알림 아이콘.png" alt="">
+                    </div>
+                    <div id="account">
+                        <img src="./assets/계정 아이콘.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="post-modal">
+                <div class="post-modal-header">
+                    <p id="edit-top">수정하기</p>
+                    <div id="xbutton" onclick="EditOff()">
+                        <img src="./assets/x .png" alt="">
+                    </div>
+                </div>
+                <div class="post-modal-body">
+                    <div class="post-modal-body-head">
+                        <img src="./assets/왼프로필.png" alt="" class="post-modal-body-head-left">
+                        <div class="post-modal-body-head-right">
+                            <p>사용자</p>
+                            <div id="Full-disclosure">
+                                <img id="first-img" src="./assets/지구본.png" alt="">
+                                <p>전체 공개</p>
+                                <img id="second-img" src="./assets/전체공개 화살표.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-modal-body-body-top">
+                        <input id="edit-title" type="text" placeholder="제목을 입력해주세요.">
+                    </div>
+                    <div class="post-modal-body-body">
+                        <textarea  name="" id="edit-info" cols="30" rows="10" placeholder="사용자님, 무슨 생각을 하고 계신가요?"></textarea>
+                    </div>
+                    <div class="post-modal-body-footer">
+                        <img src="./assets/AA.png" alt="">
+                    </div>
+                </div>
+                <div class="post-modal-footer">
+                    <div class="post-modal-footer-head">
+                        <p>게시물에 추가</p>
+                        <div class="post-modal-footer-head-buttons">
+                            <div>
+                                <img src="./assets/게시사진.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시친구.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시기분.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시위치.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시질문.png" alt="">
+                            </div>
+                            <div>
+                                <img src="./assets/게시더보기.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button id="doedit" onclick="ConfigEdit()">게시</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="header">
+            <div class="header_left">
+                <a href="">
+                    <img src="./assets/페북 아이콘.png" alt="">
+                </a>
+                <div class="search">
+                    <img src="./assets/페북 검색 아이콘.png" alt="">
+                    <input type="text" placeholder="Facebook 검색" >
+                </div>
+            </div>
+            <div class="header-mid">
+                <div id="home">
+                    <img src="./assets/홈 아이콘.png" alt="">
+                </div>
+                <div id="friend">
+                    <img src="./assets/친구 아이콘.png" alt="">
+                </div>
+                <div id="watch">
+                    <img src="./assets/워치 아이콘.png" alt="">
+                </div>
+                <div id="group">
+                    <img src="./assets/그룹 아이콘.png" alt="">
+                </div>
+                <div id="game">
+                    <img src="./assets/게임 아이콘.png" alt="">
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="head-profile">
+                    <img src="./assets/프로필 사진.png" alt="">
+                    <p>사용자</p>
+                </div>
+                <div class="head-buttons">
+                    <div id="menu">
+                        <img src="./assets/메뉴 아이콘.png" alt="">
+                    </div>
+                    <div id="messenger">
+                        <img src="./assets/메신저 아이콘.png" alt="">
+                    </div>
+                    <div id="alarm">
+                        <img src="./assets/알림 아이콘.png" alt="">
+                    </div>
+                    <div id="account">
+                        <img src="./assets/계정 아이콘.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="body-left">
+                <div>
+                    <img src="./assets/왼프로필.png" alt="">
+                    <p>사용자</p>
+                </div>
+                <div>
+                    <img src="./assets/왼코로나.png" alt="">
+                    <p>코로나19 정보 센터</p>
+                </div>
+                <div>
+                    <img src="./assets/왼친구.png" alt="">
+                    <p>친구 찾기</p>
+                </div>
+                <div>
+                    <img src="./assets/왼그룹.png" alt="">
+                    <p>그룹</p>
+                </div>
+                <div>
+                    <img src="./assets/왼워치.png" alt="">
+                    <p>Watch</p>
+                </div>
+                <div>
+                    <img src="./assets/왼이벤트.png" alt="">
+                    <p>이벤트</p>
+                </div>
+                <div>
+                    <img src="./assets/왼과거.png" alt="">
+                    <p>과거의 오늘</p>
+                </div>
+                <div>
+                    <img src="./assets/왼저장.png" alt="">
+                    <p>저장됨</p>
+                </div>
+                <div>
+                    <img src="./assets/왼페이지.png" alt="">
+                    <p>페이지</p>
+                </div>
+                <div>
+                    <img src="./assets/왼채용.png" alt="">
+                    <p>채용 정보</p>
+                </div>
+                <div>
+                    <img src="./assets/왼메신저.png" alt="">
+                    <p>Messenger</p>
+                </div>
+                <div id="left-more">
+                    <img src="./assets/왼더보기.png" alt="">
+                    <p>더 보기</p>
+                </div>
+                <p id="notice">개인정보처리방침  · 약관  · 광고  · AdChoices@ · 쿠키  · 더보기 · Facebook © 2021</p>
+            </div>
+            <div class="body-mid">
+                <div class="body-mid-wrapper">
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="./assets/왼프로필.png" alt="">
+                            <button onclick="ModalOn()">사용자님, 무슨 생각을 하고 계신가요?</button>
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-buttons">
+                                <img src="./assets/사진.png" alt="">
+                                <p>사진/동영상</p>
+                            </div>
+                            <div class="post-buttons">
+                                <img src="./assets/친구 태그.png" alt="">
+                                <p>친구 태그하기</p>
+                            </div>
+                            <div class="post-buttons">
+                                <img src="./assets/기분.png" alt="">
+                                <p>기분/활동</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = 'post-point'>
+                    </div>
+                    <div id="last"> 
+                    </div>
+                </div>
+            </div>
+            <div class="body-right">
+                <div class="body-right-header">
+                    <p>연락처</p>
+                    <div class="body-right-header-icons">
+                        <div>
+                            <img src="./assets/새 룸스.png" alt="">
+                        </div>
+                        <div>
+                            <img src="./assets/검색.png" alt="">
+                        </div>
+                        <div>
+                            <img src="./assets/옵션.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="body-right-body">
+                    <div>
+                        <img src="./assets/왼프로필.png" alt="">
+                        <p>친구1</p>
+                    </div>
+                    <div>
+                        <img src="./assets/왼프로필.png" alt="">
+                        <p>친구2</p>
+                    </div>
+                    <div id="underline"></div>
+                </div>
+                <div class="body-right-footer-header">
+                    <p>그룹 대화</p>
+                </div>
+                <div class="body-right-footer">
+                    
+                    <div class="body-right-footer-body">
+                        <img src="./assets/추가.png" alt="">
+                        <p>새 그룹 만들기</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
